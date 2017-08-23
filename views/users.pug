@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h2= users.name
+		ul
+				li= "Birthday - " + users.dob
+				li= "Gender - " + users.gender
+	h3= "Posts"
+						for post in posts
+							li
+								a(href="/posts/"+post.id)=post.content
